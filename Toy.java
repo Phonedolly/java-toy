@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import com.sun.java.util.jar.pack.Instruction.Switch;
+
 public class Toy
 {
     public static void main(String[] args) throws IOException
@@ -12,10 +14,10 @@ public class Toy
         System.out.println("안녕?");
         System.out.println("");
 
-        System.out.print("키가 몇이니    ");
+        System.out.print("키가 몇이니? ");
         you.name = reader.readLine();
         
-        System.out.print("이름이 뭐니?   ");
+        System.out.print("이름이 뭐니? ");
         you.tall = Double.valueOf(reader.readLine()).doubleValue();
 
         System.out.println("너는 키가 " + you.tall + "이고 이름은 " + you.name + "이구나");
@@ -31,4 +33,18 @@ class You
         name = "";
         tall = 0.0;
     }
+}
+
+class InputTask
+{
+    public String input(int type)
+    {
+        Switch(type)
+        {
+            case 0:
+                System.out.println("asdf");
+        }
+        return 0;
+    }
+
 }
